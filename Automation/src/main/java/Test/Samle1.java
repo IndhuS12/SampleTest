@@ -6,6 +6,7 @@ public class Samle1 {
 		// TODO Auto-generated method stub
 System.out.println("hello world");
 System.out.println("welcome");
+//disply
 	}
 
 }
