@@ -21,6 +21,16 @@ public class Locators  extends Base
 		WebElement Clearfix=driver.findElement(By.cssSelector("section.clearfix"));
 		//locating using css selector -tag[attribute=value]
 		WebElement showmessageAttribute =driver.findElement(By.cssSelector("button[id=button-one]"));
+		//locating using linktext
+		WebElement checkbox=driver.findElement(By.linkText("Checkbox Demo"));
+		//locating using Xpath
+		WebElement ShowbuttonXpath=driver.findElement(By.xpath("//button[@id='button-one']"));
+		//locating using contains
+		WebElement startswith =driver.findElement(By.xpath("//a[contains(@href,'simple')]"));
+		//locating using and
+		WebElement simpleform=driver.findElement(By.xpath("//a[contains(@href,'simple')and contains(text(),'Form ')]"));
+		//locating using or
+		WebElement  sample=driver.findElement(By.xpath("//button[@type='button']"));
 		
 		
 	}

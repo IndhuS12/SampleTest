@@ -81,7 +81,7 @@ public class AmazonLocators extends Base
 		WebElement login = driver.findElement(By.xpath("//input[contains(@name,'submit')]"));
 
 		driver.navigate().to("https://selenium.obsqurazone.com/simple-form-demo.php");
-		// by starts with
+		// by starts-with 
 		WebElement starts = driver.findElement(By.xpath("//a[starts-with(text(),'Simple')]"));
 		WebElement Startswith = driver.findElement(By.xpath("//li[starts-with(@class,'list')]"));
 		WebElement start = driver.findElement(By.xpath("//div[starts-with(@class,'container')]"));

@@ -7,7 +7,7 @@ public class Base {
 	public WebDriver driver;
 	public void InitializeBrowser() {
 		System.setProperty("webdriver.chrome.driver",
-				"C:\\Users\\Adminuser\\eclipse-workspace\\AutomationTesting\\src\\main\\java\\com\\obsquare\\Resources\\chromedriver.exe");
+				"C:\\Users\\Adminuser\\git\\SampleTest\\AutomationTesting\\src\\main\\java\\com\\obsquare\\Resources\\chromedriver.exe");
                   driver =new ChromeDriver();
                   driver.get("https://selenium.obsqurazone.com/simple-form-demo.php");
 	            driver.manage().window().maximize();
