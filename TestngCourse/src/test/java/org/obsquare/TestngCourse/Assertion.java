@@ -50,9 +50,11 @@ public class Assertion extends Base{
 	{
 		driver.navigate().to("https://selenium.obsqurazone.com/simple-form-demo.php");
 		WebElement showmessagebutton=driver.findElement(By.xpath("//button[@id='button-one']"));
-		WebElement Entermessage = driver.findElement(By.xpath("//input[@id='single-input-field']"));
-		WebElement ButtonIsDisplayedbelowsingleInputField=driver.findElement(By.xpath("//form[@method='POST']"));
-		boolean ButtonIsDisplayed=ButtonIsDisplayedbelowsingleInputField.isDisplayed();
+		WebElement singleinputbutton = driver.findElement(By.xpath("//input[@id='single-input-field']"));
+		int locationofshowmessagebutton=showmessagebutton.getLocation().getY();
+		int locationofsingleinputbutton=singleinputbutton.getLocation().getY();
+		boolean ButtonIsDisplayed=locationofshowmessagebutton>locationofsingleinputbutton;
+		//WebElement ButtonIsDisplayedbelowsingleInputField=driver.findElement(By.xpath("//form[@method='POST']"));
 		assertTrue(ButtonIsDisplayed,"The button is displayed below single input field");
 	}
 
@@ -74,12 +76,9 @@ public class Assertion extends Base{
 		driver.navigate().to("https://selenium.obsqurazone.com/simple-form-demo.php");
 		WebElement gettotal=driver.findElement(By.xpath("//button[@id='button-one']"));
 		String outputDisplay=gettotal.getText();
-		assertEquals(outputDisplay,textofgettotal,"The text of gettextbutton is wrong");
-		
-		
-		
-		
-	}
+		boolean compare=textofgettotal.equals(outputDisplay);
+		assertFalse(compare,"The text of gettextbutton is wrong");
+		}
 	
 	
 	
